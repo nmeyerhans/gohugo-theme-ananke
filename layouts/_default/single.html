@@ -38,6 +38,15 @@
       {{- .Content -}}
       {{- partial "tags.html" . -}}
       <div class="mt6">
+
+	{{ if .Param "comments" }}
+	<script data-isso="/comments/"
+        data-isso-require-author="true"
+        data-isso-reply-to-self="true"
+        src="https://noah.meyerhans.us/comments/js/embed.min.js"></script>
+	<section id="isso-thread"></section>
+	{{ end }}
+
       {{ if .Site.DisqusShortname }}
         {{ template "_internal/disqus.html" . }}
       {{ end }}
