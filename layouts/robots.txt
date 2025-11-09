@@ -7,5 +7,5 @@ User-agent: *
 Disallow:
 Sitemap: https://noah.meyerhans.us/sitemap.xml
 {{ else }}
-  Disallow: /
+Disallow: /
 {{ end }}
